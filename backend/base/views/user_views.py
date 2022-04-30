@@ -90,7 +90,7 @@ def getUserById(request, pk):
 
 
 @api_view(['PUT'])
-@permission_classes([IsAdminUser])
+@permission_classes([IsAuthenticated])
 def updateUser(request, pk):
     user = User.objects.get(id=pk)
 
